@@ -2,7 +2,7 @@ body{
     margin: 0px 0px;
     box-sizing: border-box;
     text-transform: capitalize;
-    background-color: #f5f5f5
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
@@ -326,6 +326,7 @@ background-color: #FFD333;
     ;
 }
 .leftLargeImg , .RightImg1, .RightImg2{
+    overflow: hidden;
     position: relative;    
 }
 
@@ -375,7 +376,12 @@ background-color: #FFD333;
     border: #FFD333 1px solid;
 
 }
+.thsection4{
+    background-color: #f5f5f5;
+}
+
 .fourSections{
+   background-color: #f5f5f5;
     display: flex;
     justify-content: space-evenly;
 }
