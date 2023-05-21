@@ -316,8 +316,22 @@ background-color: #FFD333;
     display: block;
     margin-bottom: 50px;
 }
+.RightImg1 img , .RightImg2:img , .leftLargeImg img{
+    transition:all 0.5s ;
+}
+.RightImg1:hover img , .RightImg2:hover img , .leftLargeImg:hover img{
+
+    transform: scale(1.2) rotate(5deg);
+  
+    z-index: -10;
+}
 
 
+
+.RightImg1 img {
+    object-fit:cover ;
+    overflow: hidden;
+}
 
 .imgesSection{
     background-color: #F5F5F5;
@@ -331,10 +345,12 @@ background-color: #FFD333;
 }
 
 .leftLargeImg div {
+    z-index: 500;
     position: absolute;display: flex;flex-direction: column;padding: 0px 50px;justify-content: center;align-items: center;
                 background-color: rgba(65, 65, 65, 0.351);color: white;text-align: center;top: 0px;right: 0px;left: 0;bottom: 0px;
 }
 .RightImg1 div,.RightImg2 div{
+    z-index: 5;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -394,6 +410,69 @@ background-color: #FFD333;
     padding: 30px 40px;
     font-size: 1.3rem;
 }
+
+.catsec{
+    background-color: #F5F5F5;
+    position: relative;
+}
+
+.categoriesSection span{
+    background-color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.categoriesSection span::after{
+    
+        position: absolute;
+        content: "";
+        
+        height: 0;
+        top: 50%;
+        right: 0;
+        left: 320px;
+        border-top: 1px dotted red;
+        z-index: 1;
+}
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.products > div{
+    
+    padding: 20px;
+}
+.productItem{
+    background-color: white;
+    display: flex;
+}
+.productItem:hover{
+    background-color: #fed331;
+}
+.theImg{
+    transition: 0.5s ;
+}
+.productItem:hover .theImg{
+    transform: scale(1.2) rotate(5deg);
+  
+}
+.imgDiv{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+.imgDiv img{
+    height: 100%;
+    width: 100%;
+}
+.textDiv{
+    padding-left: 20px;
+}
+@media screen and (max-width: 1500px) {
+    .products {
+       
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
 @media screen and (max-width: 990px) {
     .favWhenSmall{
         display: flex ;
@@ -447,7 +526,13 @@ background-color: #FFD333;
         padding: 30px 40px;
         font-size: 1.3rem;
     }   
+    .products {
+       
+        grid-template-columns: 1fr 1fr  ;
+    }
 }
+
+
 @media screen and (max-width: 760px) {
     .fourSections > div{
         background-color: white;
