@@ -2,6 +2,7 @@ body{
     margin: 0px 0px;
     box-sizing: border-box;
     text-transform: capitalize;
+    background-color: #f5f5f5
 }
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
@@ -53,6 +54,9 @@ background-color: red;
 .TopNavrightList ul li{
     padding: 4px 10px;
     position: relative;
+}
+.fourSectionsIcon{
+    color: #FED331;
 }
 .TopNavrightListDropDown, .TopNavrightListDropDown1, .TopNavrightListDropDown2{
     background-color: white;
@@ -316,16 +320,31 @@ background-color: #FFD333;
 
 
 .imgesSection{
+    background-color: #F5F5F5;
     display: grid;
     grid-template-columns: 70% 30%;
     ;
 }
-.leftLargeImg{
+.leftLargeImg , .RightImg1, .RightImg2{
     position: relative;    
 }
-.leftLargeImg div{
+
+.leftLargeImg div {
     position: absolute;display: flex;flex-direction: column;padding: 0px 50px;justify-content: center;align-items: center;
                 background-color: rgba(65, 65, 65, 0.351);color: white;text-align: center;top: 0px;right: 0px;left: 0;bottom: 0px;
+}
+.RightImg1 div,.RightImg2 div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 65, 65, 0.351);
+    color: white;
+    text-align: center;
+    top: 0px;right: 0px;left: 0;bottom: 0px;
+
 }
 .RightImgMain{
     display: grid;
@@ -334,13 +353,40 @@ background-color: #FFD333;
 }
 
 .RightImg1{
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
 }
 .RightImg1 img{
     background-size: contain;
 }
 .RightImg2{
-    padding-top: 20px;
+    padding-top: 0px;
+    margin-top: 10px;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: white 1px solid;
+    color: white;
+}
+.btn:hover{
+    color: #3D464D;
+    background-color: #FFD333;
+    border: #FFD333 1px solid;
+
+}
+.fourSections{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fourSections > div{
+    background-color: white;
+    
+    gap: 5%;
+    width: 100%;
+    margin: 10px 10px 10px 10px;
+    padding: 30px 40px;
+    font-size: 1.3rem;
 }
 @media screen and (max-width: 990px) {
     .favWhenSmall{
@@ -380,9 +426,30 @@ background-color: #FFD333;
     }
     .leftLargeImg{
        padding-right: 0px;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
      }
      .RightImgMain{
         padding-left: 0px;
     }
+    .fourSections > div{
+        background-color: white;
+        
+        gap: 5%;
+        width: 100%;
+        margin: 10px 10px 10px 10px;
+        padding: 30px 40px;
+        font-size: 1.3rem;
+    }   
+}
+@media screen and (max-width: 760px) {
+    .fourSections > div{
+        background-color: white;
+        
+        gap: 5%;
+        width: 100%;
+        margin: 2px ;
+        padding: 5px 10px;
+        font-size: 1.3rem;
+    }   
 }
