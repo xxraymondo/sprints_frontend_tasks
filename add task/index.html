@@ -11,8 +11,8 @@
   <body>
     <div class="container pt-5">
       <div class="row">
-        <div class="col-md-6">
-
+        <div id="DivForAdd"class="col-md-6 ">
+          <h1>Pleaes add the product data</h1>
           <input class="form-control" placeholder="task name" id="taskName">
           <br>
           <p id="taskNameValidation">please enter task name</p>
@@ -23,15 +23,28 @@
           <br>
           <button onclick="addrowHtml()" class="btn btn-primary">add</button>
         </div>
+        <div id="DivForUpdate" class="col-md-6  ">
+          <h1>Pleaes Update the product data</h1>
+          <input class="form-control" placeholder="task name" id="taskNameUpdate">
+          <br>
+          <p id="taskNameValidationUpdate">please enter task name</p>
+          <br>
+          <input class="form-control" type="number" placeholder="task paiorty" id="taskPaiortyUpdate">
+          <br>
+          <p id="taskPairortyValidationUpdate">please enter task paiorty</p>
+          <br>
+          <button id="updateBtn" onclick="executeUpdate()" class="btn btn-success">update</button>
+        </div>
       </div>
 
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">task name</th>
-            <th scope="col">paiorty</th>
-            <th scope="col">action</th>
+            <th scope="col">ID</th>
+            <th scope="col">Task name</th>
+            <th scope="col">Paiorty</th>
+            <th scope="col">Updata</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody id="tableBody">
@@ -40,6 +53,7 @@
         </tbody>
       </table>
     </div>
+   
     <!--JQuery Import -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
