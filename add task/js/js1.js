@@ -93,6 +93,7 @@ function updateRow(x){
   document.getElementById("taskNameUpdate").value =tableData[objIndex].taskName
   document.getElementById("taskPaiortyUpdate").value = tableData[objIndex].taskPaiorty
   
+  document.getElementById("myTable").style.display="none"
 
 }
 function executeUpdate(){
@@ -104,5 +105,7 @@ function executeUpdate(){
   document.getElementById("DivForUpdate").style.display="none"
   document.getElementById("DivForAdd").style.display="block"
   clear()
+  document.getElementById("myTable").style.display=""
+
 }
 
