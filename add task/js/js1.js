@@ -51,7 +51,7 @@ function displayData(){
 </td>
     <td scope="col">
     <button onclick="deleteRow(${tableData[i].id})" class="btn btn-danger">
-    delete 
+    delete   
   </button>
   </td>
   
@@ -69,17 +69,20 @@ function clear(){
 }
 function addrowHtml(){
   addRow()
-  clear()
+   clear()
   displayData()
 }
-function deleteRow(x){
-
-  tableData.splice(x,1)
-  displayData()
-}
-
-
 var objIndex;
+function deleteRow(x){
+  objIndex = tableData.findIndex((obj => obj.id == x));
+  tableData.splice(objIndex,1)
+  console.log(x)
+  console.log(objIndex)
+  displayData()
+}
+
+
+
 function updateRow(x){
 
   document.getElementById("DivForUpdate").style.display="block"
