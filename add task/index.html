@@ -22,19 +22,12 @@
           <p id="taskPairortyValidation">please enter task paiorty</p>
           <br>
           <button onclick="addrowHtml()" class="btn btn-primary">add</button>
+          <button id="showHigh" onclick="showHighPiroty()" class="btn btn-info">high piroty</button>
+
         </div>
         <div id="DivForUpdate" class="col-md-6  ">
-          <h1>Pleaes Update the product data</h1>
-          <input class="form-control" placeholder="task name" id="taskNameUpdate">
-          <br>
-          <p id="taskNameValidationUpdate">please enter task name</p>
-          <br>
-          <input class="form-control" type="number" placeholder="task paiorty" id="taskPaiortyUpdate">
-          <br>
-          <p id="taskPairortyValidationUpdate">please enter task paiorty and should be greater than 0</p>
-          <br>
-          <button id="updateBtn" onclick="executeUpdate()" class="btn btn-success">update</button>
-        </div>
+
+      
       </div>
 
       <table id="myTable" class="table">
@@ -52,6 +45,36 @@
           
         </tbody>
       </table>
+      <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Pleaes Update the product data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label for="taskNameUpdate">Task name update</label>
+        <input class="form-control" name="taskNameUpdate" placeholder="task name" id="taskNameUpdate">
+        <br>
+        <p id="taskNameValidationUpdate">please enter task name</p>
+        <br>
+        <label for="taskPaiortyUpdate">Task piorty update</label>
+        <input class="form-control" name="taskPaiortyUpdate" type="number" placeholder="task paiorty" id="taskPaiortyUpdate">
+        <br>
+        <p id="taskPairortyValidationUpdate">please enter task paiorty and should be greater than 0</p>
+        <br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="updateBtn"  type="button" onclick="executeUpdate()" data-bs-dismiss="modal" class="btn btn-success">update</button>      </div>
+    </div>
+  </div>
+</div>
     </div>
    
     <!--JQuery Import -->

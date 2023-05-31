@@ -2,7 +2,7 @@ document.getElementById("taskPairortyValidation").style.display="none"
 document.getElementById("taskNameValidation").style.display="none"
 document.getElementById("taskPairortyValidationUpdate").style.display="none"
 document.getElementById("taskNameValidationUpdate").style.display="none"
-document.getElementById("DivForUpdate").style.display="none"
+// document.getElementById("DivForUpdate").style.display="none"
 let updateBtn=document.getElementById("updateBtn")
 let tableData=[]
 let tablerow
@@ -45,9 +45,9 @@ function displayData(){
     <td>${tableData[i].taskName}</td>
     <td>${tableData[i].taskPaiorty}</td>
     <td scope="col">
-  <button onclick="updateRow(${tableData[i].id})" class="btn btn-success">
+  <button onclick="updateRow(${tableData[i].id})" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
   update 
-</button>
+</button>  
 </td>
     <td scope="col">
     <button onclick="deleteRow(${tableData[i].id})" class="btn btn-danger">
@@ -76,36 +76,30 @@ var objIndex;
 function deleteRow(x){
   objIndex = tableData.findIndex((obj => obj.id == x));
   tableData.splice(objIndex,1)
-  console.log(x)
-  console.log(objIndex)
   displayData()
 }
 
 
 
 function updateRow(x){
-
-  document.getElementById("DivForUpdate").style.display="block"
-  document.getElementById("DivForAdd").style.display="none"
   objIndex = tableData.findIndex((obj => obj.id == x));
-  
-  
   document.getElementById("taskNameUpdate").value =tableData[objIndex].taskName
   document.getElementById("taskPaiortyUpdate").value = tableData[objIndex].taskPaiorty
-  
-  document.getElementById("myTable").style.display="none"
-
 }
 function executeUpdate(){
- console.log( tableData[objIndex])
   tableData[objIndex].taskName=document.getElementById("taskNameUpdate").value
   tableData[objIndex].taskPaiorty=document.getElementById("taskPaiortyUpdate").value 
   console.log(tableData[objIndex].taskName)
   displayData()
-  document.getElementById("DivForUpdate").style.display="none"
   document.getElementById("DivForAdd").style.display="block"
   clear()
   document.getElementById("myTable").style.display=""
-
+}
+function showHighPiroty(){
+  let high=[];
+  for(let i=0;i<tableData.length;i++){
+      high.push(tableData[i].taskPaiorty)
+  }
+  return high
 }
 
