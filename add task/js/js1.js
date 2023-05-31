@@ -2,7 +2,6 @@ document.getElementById("taskPairortyValidation").style.display="none"
 document.getElementById("taskNameValidation").style.display="none"
 document.getElementById("taskPairortyValidationUpdate").style.display="none"
 document.getElementById("taskNameValidationUpdate").style.display="none"
-// document.getElementById("DivForUpdate").style.display="none"
 let updateBtn=document.getElementById("updateBtn")
 let tableData=[]
 let tablerow
@@ -20,16 +19,13 @@ function addRow(){
   
  taskName= document.getElementById("taskName").value
  taskPaiorty= document.getElementById("taskPaiorty").value
-
 if(taskName==""){
   document.getElementById("taskNameValidation").style.display="block"
 }else if(taskPaiorty<=0||taskPaiorty==""){
   document.getElementById("taskPairortyValidation").style.display="block"
 }else{
     hideValidation()
-  
    tablerow = {id:tableData.length, taskName:taskName, taskPaiorty:taskPaiorty};
-
     tableData.push(tablerow)
   console.log(tableData)
 
@@ -64,8 +60,7 @@ function clear(){
   document.getElementById("taskName").value=""
   document.getElementById("taskPaiorty").value=""
   document.getElementById("taskNameUpdate").value=""
-  document.getElementById("taskPaiortyUpdate").value=""
-  
+  document.getElementById("taskPaiortyUpdate").value="" 
 }
 function addrowHtml(){
   addRow()
@@ -78,9 +73,6 @@ function deleteRow(x){
   tableData.splice(objIndex,1)
   displayData()
 }
-
-
-
 function updateRow(x){
   objIndex = tableData.findIndex((obj => obj.id == x));
   document.getElementById("taskNameUpdate").value =tableData[objIndex].taskName
