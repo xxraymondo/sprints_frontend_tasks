@@ -3,3 +3,10 @@
     cursor: pointer;
 
 }
+.linkColor{
+    color: rgb(130, 130, 253);
+}
+.linkColor:hover{
+    color: rgb(0, 0, 82);
+
+}
