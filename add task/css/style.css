@@ -10,3 +10,13 @@
     color: rgb(0, 0, 82);
 
 }
+.currentStatus{
+    cursor: pointer;
+}
+.statusDone{
+    background-color: red;
+    color: green!important;
+}
+.statusNotDone{
+    color:red;
+}
