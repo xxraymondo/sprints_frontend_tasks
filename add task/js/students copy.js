@@ -52,9 +52,9 @@ class task{
     for(let i=0;i<tableData.length;i++){
      // debugger
      if(tableData[i]._status==true){
-       status="done"
+       status="pending"
      }else{
-       status="not done"
+       status="done"
      }
      
  
